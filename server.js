@@ -17,7 +17,7 @@ app.use(cors({
 app.use(express.json());
 
 // Setting up the connection to the database
-const sequelize = new Sequelize('postgres://brandalorian:p4ssw0rd@localhost:5432/trash');
+const sequelize = new Sequelize('postgres://brandalorian:p4ssw0rd@localhost:5432/trash'); 
 
 // Test the database connection
 sequelize.authenticate()
