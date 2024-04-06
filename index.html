@@ -1,13 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trash Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <nav class="bg-green-600 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="#" class="text-white text-3xl font-bold">Trash Tracker</a>
+            <div>
+                <a href="#" class="text-gray-200 text-lg hover:text-white">About</a>
+                <a href="#" class="ml-4 text-gray-200 text-lg hover:text-white">Find Location</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-green-500 text-white text-center py-8 mb-12">
+        <h1 class="text-5xl font-bold">Welcome to Trash Tracker</h1>
+        <p class="text-xl mt-2">Find out how and where to dispose of your waste responsibly</p>
+    </header>
+
+    <section class="container mx-auto mb-8">
+      <div class="flex justify-center mb-6">
+        <div class="flex w-1/2 md:w-1/3 lg:w-1/4">
+            <input type="text" id="searchInput" class="w-full p-2 rounded-l-lg shadow-inner" placeholder="Search an item..." />
+            <button id="searchButton" class="bg-green-500 text-white p-2 rounded-r-lg shadow">Search</button>
+        </div>
+    </div>
+    
+    
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-2">Item Disposal Guide</h2>
+                <p>Learn the right way to dispose of various items, from plastics to electronics.</p>
+                <a href="disposal.html" class="text-green-600 hover:text-green-800 mt-4 block">Learn More</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-2">Location Finder</h2>
+                <p>Find recycling centers and disposal facilities near you with our location-based services.</p>
+                <a href="location.html" class="text-green-600 hover:text-green-800 mt-4 block">Find Locations</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-2">Disposal Tips</h2>
+                <p>Get tips and advice on reducing waste and disposing of items properly.</p>
+                <a href="tips.html" class="text-green-600 hover:text-green-800 mt-4 block">View Tips</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-green-600 text-white text-center p-4">
+        © 2024 Trash Tracker. All rights reserved.
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
 </html>

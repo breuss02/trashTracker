@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Trash Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <nav class="bg-green-600 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="#" class="text-white text-3xl font-bold">Trash Tracker</a>
+            <!-- Other navigation links as needed -->
+        </div>
+    </nav>
+
+    <header class="bg-green-500 text-white text-center py-8 mb-12">
+        <h1 class="text-4xl font-bold">Search Results</h1>
+        <p class="text-xl mt-2">Here are the items matching your search</p>
+    </header>
+
+    <section class="container mx-auto px-4 mb-8">
+        <div class="flex justify-center mb-6">
+            <div class="flex w-1/2 md:w-1/3 lg:w-1/4">
+                <input type="text" id="searchResInput" class="w-full p-2 rounded-l-lg shadow-inner" placeholder="Search another item..." />
+                <button id="searchButton" class="bg-green-500 text-white p-2 rounded-r-lg shadow">Search</button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Example result card -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="path/to/image" alt="Item Image" class="w-full h-48 object-cover object-center mb-4 rounded">
+                <h2 class="text-xl font-bold mb-2">Item Name</h2>
+                <p>Description of the item and how to dispose of it properly.</p>
+            </div>
+            <!-- Repeat result cards for each search result -->
+        </div>
+    </section>
+
+    <footer class="bg-green-600 text-white text-center p-4">
+        © 2024 Trash Tracker. All rights reserved.
+    </footer>
+
+</body>
+<script src="searchRes.js"></script>
+</html>
