@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: brandalorian        
+      POSTGRES_PASSWORD: p4ssw0rd     
+      POSTGRES_DB: trash                 
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: brandon.reuss@jacks.sdstate.edu 
+      PGADMIN_DEFAULT_PASSWORD: p4ssw0rd
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
