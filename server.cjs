@@ -1,3 +1,4 @@
+
 const express = require('express');
 const { Sequelize, DataTypes } = require('sequelize');
 const app = express();
@@ -5,7 +6,7 @@ const port = 3000;
 const cors = require('cors');
 
 app.use(cors({
-    origin: 'http://localhost:5173'
+    origin: 'http://localhost:5174'
 }));
 
 // Middleware to parse JSON bodies
@@ -34,6 +35,7 @@ const City = sequelize.define('city', {
     freezeTableName: true
 });
 
+
 const Item = sequelize.define('items', {
     item_id: {
         type: DataTypes.INTEGER,
@@ -51,18 +53,23 @@ const Item = sequelize.define('items', {
     waste_type: {
         type: DataTypes.STRING(50),
         allowNull: false
+    },
+    location: {
+        type: DataTypes.INTEGER,
+        allowNull: false
     }
 }, {
     timestamps: false,
     freezeTableName: true
 });
 
+
 // Synchronize models with database
 sequelize.sync()
     .then(() => console.log('Models synchronized successfully.'))
     .catch(err => console.error('Error synchronizing models:', err));
 
-// Routes
+// Route definitions
 app.get('/items', async (req, res) => {
     try {
         const items = await Item.findAll();
@@ -83,23 +90,39 @@ app.get('/cities', async (req, res) => {
     }
 });
 
-// Search items by name
+app.get('/disposalLocations', async (req, res) => {
+    try{
+        const disposalLocations = await DisposalLocation.findAll();
+        res.json(disposalLocations);
+    } catch (error) { 
+        console.error('Error fetching disposal Locations: ', error);
+        res.status(500).send(error);
+    }
+});
+
 app.get('/search/items', async (req, res) => {
     try {
         const { query } = req.query;
         const items = await Item.findAll({
+            attributes: ['item_id', 'name', 'category', 'waste_type', 'location'], 
             where: {
                 name: {
                     [Sequelize.Op.iLike]: `%${query}%`
                 }
             }
         });
-        res.json(items);
+       
+        const transformedItems = items.map(item => {
+           
+            return item;
+        });
+        res.json(transformedItems);
     } catch (error) {
         console.error('Error searching for items:', error);
         res.status(500).send(error);
     }
 });
+
 
 // Start the server
 app.listen(port, () => console.log(`Server listening on port ${port}!`));

@@ -12,7 +12,7 @@
 
     <nav class="bg-green-600 p-4">
         <div class="container mx-auto flex items-center justify-between">
-            <a href="#" class="text-white text-3xl font-bold">Trash Tracker</a>
+            <a href="index.html" class="text-white text-3xl font-bold">Trash Tracker</a>
             <!-- Other navigation links as needed -->
         </div>
     </nav>
@@ -29,14 +29,8 @@
                 <button id="searchButton" class="bg-green-500 text-white p-2 rounded-r-lg shadow">Search</button>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Example result card -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <img src="path/to/image" alt="Item Image" class="w-full h-48 object-cover object-center mb-4 rounded">
-                <h2 class="text-xl font-bold mb-2">Item Name</h2>
-                <p>Description of the item and how to dispose of it properly.</p>
-            </div>
-            <!-- Repeat result cards for each search result -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="resultsContainer">
+            <!-- Dynamic result cards will be inserted here by searchRes.js -->
         </div>
     </section>
 

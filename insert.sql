@@ -8,41 +8,45 @@ CREATE TABLE items (
     item_id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     category VARCHAR(50) NOT NULL,
-    waste_type VARCHAR(50) NOT NULL
+    waste_type VARCHAR(50) NOT NULL,
+    location INTEGER NOT NULL
 );
 
-INSERT INTO items (name, category, waste_type) VALUES ('Plastic Bottle', 'Plastic', 'Recyclable');
-INSERT INTO items (name, category, waste_type) VALUES ('Newspaper', 'Paper', 'Recyclable');
-INSERT INTO items (name, category, waste_type) VALUES ('Aluminum Can', 'Metal', 'Recyclable');
-INSERT INTO items (name, category, waste_type) VALUES ('Cardboard Box', 'Paper', 'Recyclable');
+INSERT INTO items (name, category, waste_type, 2) VALUES ('Tennis Shoe', 'Footwear', 'Recyclable');
 
-INSERT INTO items (name, category, waste_type) VALUES ('Apple Core', 'Food', 'Compostable');
-INSERT INTO items (name, category, waste_type) VALUES ('Banana Peel', 'Food', 'Compostable');
-INSERT INTO items (name, category, waste_type) VALUES ('Coffee Grounds', 'Food', 'Compostable');
-INSERT INTO items (name, category, waste_type) VALUES ('Eggshells', 'Food', 'Compostable');
 
-INSERT INTO items (name, category, waste_type) VALUES ('Plastic Wrap', 'Plastic', 'Normal Trash');
-INSERT INTO items (name, category, waste_type) VALUES ('Styrofoam Cup', 'Plastic', 'Normal Trash');
-INSERT INTO items (name, category, waste_type) VALUES ('Cigarette Butt', 'Other', 'Normal Trash');
-INSERT INTO items (name, category, waste_type) VALUES ('Broken Glass', 'Other', 'Normal Trash');
+INSERT INTO items (name, category, waste_type, 2) VALUES ('Plastic Bottle', 'Plastic', 'Recyclable');
+INSERT INTO items (name, category, waste_type, 2) VALUES ('Newspaper', 'Paper', 'Recyclable');
+INSERT INTO items (name, category, waste_type, 2) VALUES ('Aluminum Can', 'Metal', 'Recyclable');
+INSERT INTO items (name, category, waste_type, 2 ) VALUES ('Cardboard Box', 'Paper', 'Recyclable');
+
+INSERT INTO items (name, category, waste_type, 2) VALUES ('Apple Core', 'Food', 'Compostable');
+INSERT INTO items (name, category, waste_type, 2) VALUES ('Banana Peel', 'Food', 'Compostable');
+INSERT INTO items (name, category, waste_type, 2) VALUES ('Coffee Grounds', 'Food', 'Compostable');
+INSERT INTO items (name, category, waste_type, 2) VALUES ('Eggshells', 'Food', 'Compostable');
+
+INSERT INTO items (name, category, waste_type, 1) VALUES ('Plastic Wrap', 'Plastic', 'Normal Trash');
+INSERT INTO items (name, category, waste_type, 1) VALUES ('Styrofoam Cup', 'Plastic', 'Normal Trash');
+INSERT INTO items (name, category, waste_type, 1) VALUES ('Cigarette Butt', 'Other', 'Normal Trash');
+INSERT INTO items (name, category, waste_type, 1) VALUES ('Broken Glass', 'Other', 'Normal Trash');
 
 -- Recyclable Items
-INSERT INTO items (name, category, waste_type) VALUES ('Glass Bottle', 'Glass', 'Recyclable');
-INSERT INTO items (name, category, waste_type) VALUES ('Plastic Bag', 'Plastic', 'Recyclable');
-INSERT INTO items (name, category, waste_type) VALUES ('Tin Can', 'Metal', 'Recyclable');
-INSERT INTO items (name, category, waste_type) VALUES ('Magazines', 'Paper', 'Recyclable');
+INSERT INTO items (name, category, waste_type, 3) VALUES ('Glass Bottle', 'Glass', 'Recyclable');
+INSERT INTO items (name, category, waste_type, 3) VALUES ('Plastic Bag', 'Plastic', 'Recyclable');
+INSERT INTO items (name, category, waste_type, 3) VALUES ('Tin Can', 'Metal', 'Recyclable');
+INSERT INTO items (name, category, waste_type, 3) VALUES ('Magazines', 'Paper', 'Recyclable');
 
 -- Compostable Items
-INSERT INTO items (name, category, waste_type) VALUES ('Vegetable Scraps', 'Food', 'Compostable');
-INSERT INTO items (name, category, waste_type) VALUES ('Tea Bags', 'Food', 'Compostable');
-INSERT INTO items (name, category, waste_type) VALUES ('Fruit Peelings', 'Food', 'Compostable');
-INSERT INTO items (name, category, waste_type) VALUES ('Paper Towels', 'Paper', 'Compostable');
+INSERT INTO items (name, category, waste_type, 1) VALUES ('Vegetable Scraps', 'Food', 'Compostable');
+INSERT INTO items (name, category, waste_type, 1) VALUES ('Tea Bags', 'Food', 'Compostable');
+INSERT INTO items (name, category, waste_type, 1) VALUES ('Fruit Peelings', 'Food', 'Compostable');
+INSERT INTO items (name, category, waste_type,1 ) VALUES ('Paper Towels', 'Paper', 'Compostable');
 
 -- Normal Trash Items
-INSERT INTO items (name, category, waste_type) VALUES ('Plastic Cutlery', 'Plastic', 'Normal Trash');
-INSERT INTO items (name, category, waste_type) VALUES ('Candy Wrappers', 'Other', 'Normal Trash');
-INSERT INTO items (name, category, waste_type) VALUES ('Disposable Diapers', 'Other', 'Normal Trash');
-INSERT INTO items (name, category, waste_type) VALUES ('Broken Ceramics', 'Other', 'Normal Trash');
+INSERT INTO items (name, category, waste_type, 1) VALUES ('Plastic Cutlery', 'Plastic', 'Normal Trash');
+INSERT INTO items (name, category, waste_type, 1) VALUES ('Candy Wrappers', 'Other', 'Normal Trash');
+INSERT INTO items (name, category, waste_type, 1) VALUES ('Disposable Diapers', 'Other', 'Normal Trash');
+INSERT INTO items (name, category, waste_type, 1) VALUES ('Broken Ceramics', 'Other', 'Normal Trash');
 
 
 -- Washington, D.C.
